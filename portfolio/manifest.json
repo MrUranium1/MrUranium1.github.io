@@ -1,0 +1,88 @@
+{
+ "files": [
+  {
+   "path": "index.html",
+   "ctx": "html",
+   "lang": "html",
+   "size": 1014
+  },
+  {
+   "path": "assets/style.css",
+   "ctx": "html",
+   "lang": "css",
+   "size": 6433
+  },
+  {
+   "path": "assets/app.js",
+   "ctx": "html",
+   "lang": "javascript",
+   "size": 11808
+  },
+  {
+   "path": "data/content.json",
+   "ctx": "html",
+   "lang": "json",
+   "size": 3265
+  },
+  {
+   "path": "README.md",
+   "ctx": "html",
+   "lang": "markdown",
+   "size": 1927
+  },
+  {
+   "path": "src/c/tokenizer.c",
+   "ctx": "c",
+   "lang": "c",
+   "size": 5587
+  },
+  {
+   "path": "src/c/Makefile",
+   "ctx": "c",
+   "lang": "make",
+   "size": 167
+  },
+  {
+   "path": "tools/build.py",
+   "ctx": "python",
+   "lang": "python",
+   "size": 2074
+  },
+  {
+   "path": "tools/whitelist.txt",
+   "ctx": "python",
+   "lang": "text",
+   "size": 434
+  },
+  {
+   "path": "tools/validate_content.rb",
+   "ctx": "ruby",
+   "lang": "ruby",
+   "size": 1407
+  },
+  {
+   "path": "experiments/rust/Cargo.toml",
+   "ctx": "rust",
+   "lang": "toml",
+   "size": 337
+  },
+  {
+   "path": "experiments/rust/src/lib.rs",
+   "ctx": "rust",
+   "lang": "rust",
+   "size": 3998
+  },
+  {
+   "path": "experiments/java/pom.xml",
+   "ctx": "java",
+   "lang": "xml",
+   "size": 1971
+  },
+  {
+   "path": "experiments/java/src/main/java/dev/mehir/Main.java",
+   "ctx": "java",
+   "lang": "java",
+   "size": 2300
+  }
+ ]
+}
