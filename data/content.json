@@ -1,0 +1,50 @@
+{
+  "profile": {
+    "tagline": "I build for fun.",
+    "intro": "Mehir. Developer, tinkerer and student from Bangladesh. I like programming, Linux, open source, systems, networking and technology."
+  },
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/MrUranium1" },
+    { "label": "X", "url": "https://x.com/rusthatesmarty" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/sahariar-hossain-mehir-b89178398/" },
+    { "label": "Email", "url": "mailto:hossainmehir2006@gmail.com" }
+  ],
+  "projects": [
+    {
+      "name": "Omarchy Tide Island",
+      "desc": "Swaps the Omarchy bar for a Dynamic-Island-style overlay with one keypress, plus wallpaper and theme pickers.",
+      "tags": ["Omarchy", "Quickshell", "QML", "Bash"],
+      "url": "https://github.com/MrUranium1/Omarchy-Tide-Island",
+      "langs": []
+    },
+    {
+      "name": "OmaNet",
+      "desc": "Omarchy bar plugin that controls Android USB reverse tethering through GNirehtet, with systemd service integration.",
+      "tags": ["Omarchy", "GNirehtet", "systemd"],
+      "url": "https://github.com/MrUranium1/Omanet",
+      "langs": []
+    },
+    {
+      "name": "Local Chess",
+      "desc": "Play chess with friends nearby, no internet needed. Connects over Bluetooth or local Wi-Fi for real-time local multiplayer.",
+      "tags": ["Kotlin", "Bluetooth", "Local Wi-Fi"],
+      "url": "https://github.com/MrUranium1/Local_Chess",
+      "langs": []
+    }
+  ],
+  "contributions": [],
+  "langs": [
+    { "id": "html", "label": "HTML", "status": "runs in browser", "entry": "index.html",
+      "role": "The application shell and structure. The site is plain HTML, CSS and JavaScript: no framework, no dependencies, hash routing so it works on GitHub Pages." },
+    { "id": "rust", "label": "Rust", "status": "experiment, untested", "entry": "experiments/rust/src/lib.rs",
+      "role": "No Rust runs in the live site yet. An experimental WebAssembly prototype (a Mandelbrot renderer using wasm-bindgen) is kept in experiments/rust. It has not been built or tested." },
+    { "id": "python", "label": "Python", "status": "build time", "entry": "tools/build.py",
+      "role": "tools/build.py generates manifest.json, the whitelist of files Code Mode may show, and refuses anything that looks like a secret. It runs on my machine, not in your browser." },
+    { "id": "java", "label": "Java", "status": "experiment, untested", "entry": "experiments/java/src/main/java/dev/mehir/Main.java",
+      "role": "No Java runs in the live site. A TeaVM prototype (Java compiled to JavaScript) is kept in experiments/java. It has not been built or tested, and I have not found a practical role for Java in a static site yet." },
+    { "id": "c", "label": "C", "status": "runs in browser (WebAssembly)", "entry": "src/c/tokenizer.c",
+      "role": "The syntax highlighter in Code Mode. src/c/tokenizer.c is freestanding C compiled to a ~4 KB WebAssembly module, loaded only when Code Mode opens." },
+    { "id": "ruby", "label": "Ruby", "status": "build time", "entry": "tools/validate_content.rb",
+      "role": "tools/validate_content.rb checks data/content.json (required fields, https links) before the manifest is built. It runs on my machine, not in your browser." }
+  ]
+}
