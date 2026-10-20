@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruby · Mehir</title>
+<style>
+body{margin:0;background:radial-gradient(circle at 70% 0,#2a0a14,#12060a 60%);color:#f1dfe1;font:17px/1.7 "Iowan Old Style",Georgia,"Times New Roman",serif;min-height:100vh}
+.top{display:flex;gap:20px;padding:18px 28px;font:13px ui-monospace,Menlo,monospace;letter-spacing:.05em}
+.top a{color:#8f6068;text-decoration:none}.top a.on,.top a:hover{color:#ff4d6d}
+#app{max-width:780px;margin:0 auto;padding:36px 24px 90px}
+h1{font-size:clamp(64px,14vw,130px);font-style:italic;font-weight:400;margin:0;line-height:1;color:#e0115f;letter-spacing:-.03em}
+.tag{color:#a9858b;max-width:520px}.small{font-size:14px}
+.gem{width:120px;height:120px;margin:28px 0 6px;cursor:pointer;transition:transform .3s,filter .4s;
+  clip-path:polygon(25% 0,75% 0,100% 35%,50% 100%,0 35%);
+  background:conic-gradient(from 20deg at 50% 45%,#ff4d6d,#9b0f3b,#ff8fa3,#7a0a2e,#e0115f,#ff4d6d)}
+.gem:hover{transform:rotate(-6deg) scale(1.08)}
+.sec{margin-top:48px}
+.sec h2{font:400 13px ui-monospace,Menlo,monospace;letter-spacing:.2em;text-transform:uppercase;color:#e0115f;border-bottom:1px solid #3a1620;padding-bottom:10px}
+.sec h2::before{content:"◆ "}
+.item{display:block;padding:14px 0;border-bottom:1px solid #2a1118;color:inherit;text-decoration:none;transition:.25s}
+.item:hover{padding-left:14px;color:#fff;border-color:#e0115f}
+.item b{font-weight:400;font-size:20px;font-style:italic}.item p{margin:0;color:#a9858b;font-size:15px}.empty{color:#6d444c;font-style:italic}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@ruby/3.3-wasm-wasi@2.10.1/dist/browser.script.iife.js"></script>
+</head><body>
+<nav class="top"><a href="../">~</a><a href="../rust/">rust</a><a href="../ruby/" class="on">ruby</a><a href="../python/">python</a><a href="../java/">java</a><a href="../c/">c</a></nav>
+<main id="app"><p class="empty">loading Ruby… (it is a few MB, first visit only)</p></main>
+<script type="text/ruby" src="./main.rb"></script>
+</body></html>
