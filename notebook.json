@@ -1,0 +1,24 @@
+{
+  "title": "Mehir",
+  "subtitle": "notes, thoughts & loose ends",
+  "chapters": [
+    { "id": "thoughts", "title": "Thoughts", "blurb": "things I turn over in my head",
+      "entries": [
+        { "title": "How this notebook works", "date": "sample", "placeholder": true,
+          "body": "# Placeholder text\n\nThis entry is a stand-in written to show how pages flow. Replace it with your own writing in content/notebook.json.\n\nEvery chapter is a list of entries. Each entry has a title, a date and a body. Separate paragraphs with a blank line, and the notebook will wrap long writing onto as many pages as it needs.\n\n- a line starting with a dash becomes a list item\n- a line starting with # becomes a small heading\n- a line starting with > becomes a margin note\n\n> a note scribbled in the margin\n\nLong entries continue across pages on their own. If the window is resized, the pages are laid out again, so nothing is clipped. Keep adding paragraphs to see the text continue onto the next sheet, and then the one after that.\n\nSeparate entries follow one another on the same page when there is room, just like writing in a real notebook without always starting a fresh sheet." },
+        { "title": "A second sample", "date": "sample", "placeholder": true,
+          "body": "Short entries sit comfortably together. This one only exists to show that.\n\n> delete me" }
+      ] },
+    { "id": "fragments", "title": "Fragments", "blurb": "half-sentences and stray lines",
+      "entries": [
+        { "title": "Sample fragments", "date": "sample", "placeholder": true,
+          "body": "- placeholder fragment one\n- placeholder fragment two\n- placeholder fragment three" }
+      ] },
+    { "id": "philosophy", "title": "Philosophy", "blurb": "questions, mostly", "entries": [] },
+    { "id": "writings", "title": "Writings", "blurb": "longer pieces", "entries": [] },
+    { "id": "poems", "title": "Poems", "blurb": "", "entries": [] },
+    { "id": "personal-notes", "title": "Personal Notes", "blurb": "", "entries": [] },
+    { "id": "projects", "title": "Projects", "blurb": "", "entries": [] },
+    { "id": "miscellaneous", "title": "Miscellaneous", "blurb": "", "entries": [] }
+  ]
+}
