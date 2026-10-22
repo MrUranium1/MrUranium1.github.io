@@ -267,14 +267,22 @@
         transform: translate(1px, -1px);
       }
 
-      /* Writings button */
+/* Writings button & hint */
+      .writings-link-block {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-decoration: none;
+        gap: 0.125rem;
+      }
+
       .writings-btn {
         background: none;
         border: none;
-        padding: 0.5rem 0;
+        padding: 0;
         cursor: pointer;
         font-family: var(--font-handwriting);
-        font-size: 1.75rem;
+        font-size: 1.85rem;
         color: var(--text-muted);
         display: inline-flex;
         align-items: center;
@@ -282,7 +290,7 @@
         transition: color 0.15s ease;
       }
 
-      .writings-btn:hover {
+      .writings-link-block:hover .writings-btn {
         color: var(--text-primary);
       }
 
@@ -293,11 +301,45 @@
         transition: transform 0.2s ease, color 0.15s ease;
       }
 
-      .writings-btn:hover .arrow {
+      .writings-link-block:hover .writings-btn .arrow {
         color: var(--text-secondary);
         transform: translateX(4px);
       }
 
+      .writings-hint {
+        font-family: var(--font-handwriting);
+        font-size: 1.35rem;
+        color: var(--text-subtle);
+        line-height: 1.2;
+        transition: color 0.15s ease;
+      }
+
+      .writings-link-block:hover .writings-hint {
+        color: var(--text-secondary);
+      }
+
+      /* Note entry & date */
+      .note-article {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px dashed rgba(39, 39, 42, 0.6);
+      }
+
+      .note-article:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .note-date {
+        font-family: var(--font-mono);
+        font-size: 0.8125rem;
+        color: var(--text-subtle);
+        letter-spacing: 0.05em;
+        display: inline-flex;
+        align-items: center;
+      }
       /* Tech Stack Grid */
       .stack-grid {
         display: grid;
