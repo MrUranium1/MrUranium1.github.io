@@ -1,0 +1,61 @@
+{
+  "name": "mehir",
+  "bio": "Developer working with systems and open-source tooling. Writing software in C and Python, currently exploring Rust and Ruby.",
+  "subBio": "Daily driver is Omarchy (Arch Linux). Contributor to community software ecosystems and search infrastructure. Always open to jump into meaningful open-source projects.",
+  "email": "hossainmehir2006@gmail.com",
+  "discord": "mehir",
+  "discordUrl": "https://discord.com/users/1096716179785121842",
+  "os": "omarchy",
+  "projects": [
+    {
+      "name": "Omanet",
+      "url": "https://github.com/MrUranium1/Omanet",
+      "desc": "Native Omarchy plugin for controlling Android USB reverse tethering through GNirehtet, featuring top-bar controls and systemd service integration."
+    },
+    {
+      "name": "Omarchy-Tide-Island",
+      "url": "https://github.com/MrUranium1/Omarchy-Tide-Island",
+      "desc": "Tide Island integration for Omarchy with native theme and wallpaper picking, configurable shortcuts, and desktop OSD / notification integration."
+    },
+    {
+      "name": "Local_Chess",
+      "url": "https://github.com/MrUranium1/Local_Chess",
+      "desc": "Play chess with friends nearby with no internet required. Connect over Bluetooth or local Wi-Fi for real-time peer-to-peer multiplayer chess matches."
+    }
+  ],
+  "contributions": [
+    {
+      "name": "Omarchy Plugin Marketplace",
+      "url": "https://github.com/omacom/omarchy-plugin-marketplace",
+      "desc": "Contributed to the plugin marketplace ecosystem for Omarchy users. Worked on repository indexing, package validation rules, and streamlined installation tooling for customized Arch environments."
+    },
+    {
+      "name": "Xerj AI Search Engine",
+      "url": "https://github.com/xerj-org/xerj",
+      "desc": "Contributed to query ingestion and indexing routines for the Xerj search engine. Assisted in processing pipeline handlers and performance improvements for data fetching."
+    }
+  ],
+  "stack": [
+    {
+      "label": "Known",
+      "title": "C, Python, HTML",
+      "desc": "Core languages for low-level systems, automation scripts, and web structure."
+    },
+    {
+      "label": "Learning",
+      "title": "Rust, Ruby",
+      "desc": "Exploring memory-safe concurrent systems in Rust and expressive scripting in Ruby."
+    },
+    {
+      "label": "Environment",
+      "title": "Omarchy",
+      "desc": "Arch Linux daily driver configured for minimal overhead and keyboard-first workflows."
+    }
+  ],
+  "notes": [
+    {
+      "title": "i build & develop for hobby.",
+      "content": "tinkering with low-level systems, writing C and Python, learning Rust, and daily driving Arch Linux on Omarchy — just the pure craft without the noise."
+    }
+  ]
+}
