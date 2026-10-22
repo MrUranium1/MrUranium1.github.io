@@ -10,29 +10,34 @@
     {
       "name": "Omanet",
       "url": "https://github.com/MrUranium1/Omanet",
-      "desc": "Native Omarchy plugin for controlling Android USB reverse tethering through GNirehtet, featuring top-bar controls and systemd service integration."
+      "desc": "Native Omarchy plugin for controlling Android USB reverse tethering through GNirehtet, featuring top-bar controls and systemd service integration.",
+      "pinned": true
     },
     {
       "name": "Omarchy-Tide-Island",
       "url": "https://github.com/MrUranium1/Omarchy-Tide-Island",
-      "desc": "Tide Island integration for Omarchy with native theme and wallpaper picking, configurable shortcuts, and desktop OSD / notification integration."
+      "desc": "Tide Island integration for Omarchy with native theme and wallpaper picking, configurable shortcuts, and desktop OSD / notification integration.",
+      "pinned": true
     },
     {
       "name": "Local_Chess",
       "url": "https://github.com/MrUranium1/Local_Chess",
-      "desc": "Play chess with friends nearby with no internet required. Connect over Bluetooth or local Wi-Fi for real-time peer-to-peer multiplayer chess matches."
+      "desc": "Play chess with friends nearby with no internet required. Connect over Bluetooth or local Wi-Fi for real-time peer-to-peer multiplayer chess matches.",
+      "pinned": true
     }
   ],
   "contributions": [
     {
       "name": "Omarchy Plugin Marketplace",
       "url": "https://github.com/omacom/omarchy-plugin-marketplace",
-      "desc": "Contributed to the plugin marketplace ecosystem for Omarchy users. Worked on repository indexing, package validation rules, and streamlined installation tooling for customized Arch environments."
+      "desc": "Contributed to the plugin marketplace ecosystem for Omarchy users. Worked on repository indexing, package validation rules, and streamlined installation tooling for customized Arch environments.",
+      "pinned": true
     },
     {
       "name": "Xerj AI Search Engine",
       "url": "https://github.com/xerj-org/xerj",
-      "desc": "Contributed to query ingestion and indexing routines for the Xerj search engine. Assisted in processing pipeline handlers and performance improvements for data fetching."
+      "desc": "Contributed to query ingestion and indexing routines for the Xerj search engine. Assisted in processing pipeline handlers and performance improvements for data fetching.",
+      "pinned": true
     }
   ],
   "stack": [
@@ -56,10 +61,6 @@
     {
       "title": "i build & develop for hobby.",
       "content": "tinkering with low-level systems, writing C and Python, learning Rust, and daily driving Arch Linux on Omarchy — just the pure craft without the noise."
-    },
-    {
-      "title": "Maybe I should build a rust chess engine.",
-      "content": "Dang it! it already exists"
     }
   ]
 }
