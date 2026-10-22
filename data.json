@@ -60,7 +60,13 @@
   "notes": [
     {
       "title": "i build & develop for hobby.",
+      "date": "2026.10.22",
       "content": "tinkering with low-level systems, writing C and Python, learning Rust, and daily driving Arch Linux on Omarchy — just the pure craft without the noise."
+    },
+    {
+      "title": "why i love building offline & peer-to-peer tools",
+      "date": "2026.09.14",
+      "content": "When building Local_Chess, the goal was simple: no accounts, no central servers, no cloud dependency. Just two devices communicating directly over local Wi-Fi and Bluetooth. Software should still work when the internet is cut."
     }
   ]
 }
