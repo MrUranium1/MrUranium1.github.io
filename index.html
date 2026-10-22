@@ -89,6 +89,7 @@
         font-family: var(--font-handwriting);
       }
 
+      /* Section Layout */
       .section-header {
         border-bottom: 1px solid var(--border-color);
         padding-bottom: 0.75rem;
@@ -103,6 +104,36 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
         color: var(--text-muted);
+        transition: color 0.15s ease;
+      }
+
+      .section-title-link {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .section-title-link:hover .section-title {
+        color: var(--text-primary);
+      }
+
+      .view-all-hint {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-subtle);
+        transition: color 0.15s ease, transform 0.15s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
+      .section-title-link:hover .view-all-hint {
+        color: var(--text-primary);
+        transform: translateX(3px);
       }
 
       .section-badge {
@@ -111,6 +142,7 @@
         color: var(--text-subtle);
       }
 
+      /* Hero */
       .hero-title {
         font-family: var(--font-mono);
         font-size: 2.25rem;
@@ -140,6 +172,7 @@
         font-weight: 500;
       }
 
+      /* Quick Links Bar */
       .quick-links {
         display: flex;
         flex-wrap: wrap;
@@ -175,6 +208,7 @@
         color: #27272a;
       }
 
+      /* Project Items */
       .project-list {
         display: flex;
         flex-direction: column;
@@ -232,6 +266,7 @@
         transform: translate(1px, -1px);
       }
 
+      /* Writings button */
       .writings-btn {
         background: none;
         border: none;
@@ -262,6 +297,7 @@
         transform: translateX(4px);
       }
 
+      /* Tech Stack Grid */
       .stack-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -304,6 +340,7 @@
         padding-top: 0.25rem;
       }
 
+      /* Contact Logos */
       .contact-logos {
         display: flex;
         align-items: center;
@@ -331,17 +368,21 @@
         flex-shrink: 0;
       }
 
+      /* Subpage Views */
+      #projects-view,
+      #contributions-view,
       #writings-view {
         display: none;
       }
 
-      .notes-header {
-        padding-top: 3rem;
+      .subpage-header {
+        padding-top: 3.5rem;
+        padding-bottom: 2rem;
       }
 
       @media (min-width: 640px) {
-        .notes-header {
-          padding-top: 4rem;
+        .subpage-header {
+          padding-top: 4.5rem;
         }
       }
 
@@ -373,10 +414,18 @@
         transform: translateX(-3px);
       }
 
+      .subpage-content {
+        padding-top: 1rem;
+        padding-bottom: 8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+      }
+
       .notes-container {
         max-width: 42rem;
         margin: 0 auto;
-        padding-top: 4rem;
+        padding-top: 2rem;
         padding-bottom: 8rem;
         display: flex;
         flex-direction: column;
@@ -385,7 +434,7 @@
 
       @media (min-width: 640px) {
         .notes-container {
-          padding-top: 6rem;
+          padding-top: 4rem;
         }
       }
 
@@ -422,6 +471,7 @@
         }
       }
 
+      /* Footer */
       footer {
         border-top: 1px solid var(--border-color);
         padding: 2.5rem 0;
@@ -482,13 +532,17 @@
           </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
+        <!-- Projects Section (Pinned) -->
+        <section id="projects-section">
           <div class="section-header">
-            <h2 class="section-title">Projects</h2>
+            <a href="#projects" class="section-title-link" title="Click to view all projects">
+              <span class="section-title">Projects</span>
+              <span class="view-all-hint">all projects <span class="arrow">→</span></span>
+            </a>
           </div>
 
           <div id="project-list" class="project-list">
+            <!-- Pinned projects render here -->
             <div class="project-item">
               <a href="https://github.com/MrUranium1/Omanet" target="_blank" rel="noreferrer noopener" class="project-link">
                 <span>Omanet</span>
@@ -530,13 +584,17 @@
           </div>
         </section>
 
-        <!-- Open Source Contributions -->
-        <section id="contributions">
+        <!-- Open Source Contributions (Pinned) -->
+        <section id="contributions-section">
           <div class="section-header">
-            <h2 class="section-title">Open Source Contributions</h2>
+            <a href="#contributions" class="section-title-link" title="Click to view all open source contributions">
+              <span class="section-title">Open Source Contributions</span>
+              <span class="view-all-hint">all contributions <span class="arrow">→</span></span>
+            </a>
           </div>
 
           <div id="contribution-list" class="project-list">
+            <!-- Pinned contributions render here -->
             <div class="project-item">
               <a href="https://github.com/omacom/omarchy-plugin-marketplace" target="_blank" rel="noreferrer noopener" class="project-link">
                 <span>Omarchy Plugin Marketplace</span>
@@ -567,10 +625,10 @@
 
         <!-- Handwritten Writings Option -->
         <div style="padding-top: 0.5rem;">
-          <button id="open-writings-btn" class="writings-btn" title="Read personal notes">
+          <a href="#writings" class="writings-btn" title="Read personal notes">
             <span>writings</span>
             <span class="arrow">→</span>
-          </button>
+          </a>
         </div>
 
         <!-- Technical Stack Section -->
@@ -580,7 +638,7 @@
             <span class="section-badge">arsenal</span>
           </div>
 
-          <div class="stack-grid" style="margin-top: 1.5rem;">
+          <div id="stack-grid" class="stack-grid" style="margin-top: 1.5rem;">
             <div class="stack-card">
               <div class="stack-label">Known</div>
               <div class="stack-title">C, Python, HTML</div>
@@ -678,11 +736,87 @@
     </div>
 
     <!-- ========================================== -->
-    <!-- 2. WRITINGS / NOTES VIEW                   -->
+    <!-- 2. ALL PROJECTS VIEW                       -->
+    <!-- ========================================== -->
+    <div id="projects-view">
+      <div class="container subpage-header">
+        <button class="back-home-btn back-btn" aria-label="Back to home">
+          <svg class="back-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+          <span class="font-mono" style="font-size: 0.8125rem; color: #e4e4e7; letter-spacing: 0.04em;">back to home</span>
+        </button>
+      </div>
+
+      <div class="container subpage-content">
+        <div class="section-header">
+          <h1 class="hero-title" style="margin-bottom: 0;">Projects</h1>
+          <span id="all-projects-count" class="section-badge"></span>
+        </div>
+        <p class="hero-subdesc">
+          Complete archive of personal projects, utilities, systems programs, and tools.
+        </p>
+
+        <div id="all-projects-list" class="project-list">
+          <!-- All projects render here -->
+        </div>
+      </div>
+
+      <footer>
+        <div class="container footer-inner">
+          <span>mehir.is-a.dev</span>
+          <button class="back-home-btn" style="background: none; border: none; color: inherit; font-family: inherit; font-size: inherit; cursor: pointer;">
+            ↑ back to home
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 3. ALL CONTRIBUTIONS VIEW                  -->
+    <!-- ========================================== -->
+    <div id="contributions-view">
+      <div class="container subpage-header">
+        <button class="back-home-btn back-btn" aria-label="Back to home">
+          <svg class="back-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+          <span class="font-mono" style="font-size: 0.8125rem; color: #e4e4e7; letter-spacing: 0.04em;">back to home</span>
+        </button>
+      </div>
+
+      <div class="container subpage-content">
+        <div class="section-header">
+          <h1 class="hero-title" style="margin-bottom: 0;">Open Source Contributions</h1>
+          <span id="all-contributions-count" class="section-badge"></span>
+        </div>
+        <p class="hero-subdesc">
+          Upstream contributions, packaging specifications, patches, and open-source ecosystem tools.
+        </p>
+
+        <div id="all-contributions-list" class="project-list">
+          <!-- All contributions render here -->
+        </div>
+      </div>
+
+      <footer>
+        <div class="container footer-inner">
+          <span>mehir.is-a.dev</span>
+          <button class="back-home-btn" style="background: none; border: none; color: inherit; font-family: inherit; font-size: inherit; cursor: pointer;">
+            ↑ back to home
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 4. WRITINGS / NOTES VIEW                   -->
     <!-- ========================================== -->
     <div id="writings-view">
-      <div class="container notes-header">
-        <button id="back-home-btn" class="back-btn" aria-label="Back to home">
+      <div class="container subpage-header">
+        <button class="back-home-btn back-btn" aria-label="Back to home">
           <svg class="back-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"/>
             <polyline points="12 19 5 12 12 5"/>
@@ -699,50 +833,65 @@
           </p>
         </article>
       </div>
+
+      <footer>
+        <div class="container footer-inner">
+          <span>mehir.is-a.dev</span>
+          <button class="back-home-btn" style="background: none; border: none; color: inherit; font-family: inherit; font-size: inherit; cursor: pointer;">
+            ↑ back to home
+          </button>
+        </div>
+      </footer>
     </div>
 
-    <!-- Vanilla Javascript Interactions & Dynamic JSON Loader -->
+    <!-- Vanilla Javascript Router & Dynamic JSON Loader -->
     <script>
       (function() {
         var homeView = document.getElementById('home-view');
+        var projectsView = document.getElementById('projects-view');
+        var contributionsView = document.getElementById('contributions-view');
         var writingsView = document.getElementById('writings-view');
-        var openWritingsBtn = document.getElementById('open-writings-btn');
-        var backHomeBtn = document.getElementById('back-home-btn');
+
         var copyEmailBtn = document.getElementById('copy-email-btn');
         var copyIcon = document.getElementById('copy-icon');
         var checkIcon = document.getElementById('check-icon');
 
+        // Simple Single-Page Hash Router (Works 100% on GitHub Pages without server setup)
         function showView(view) {
-          if (view === 'writings') {
-            homeView.style.display = 'none';
-            writingsView.style.display = 'block';
-            window.scrollTo(0, 0);
+          if (homeView) homeView.style.display = 'none';
+          if (projectsView) projectsView.style.display = 'none';
+          if (contributionsView) contributionsView.style.display = 'none';
+          if (writingsView) writingsView.style.display = 'none';
+
+          if (view === 'projects') {
+            if (projectsView) projectsView.style.display = 'block';
+          } else if (view === 'contributions') {
+            if (contributionsView) contributionsView.style.display = 'block';
+          } else if (view === 'writings' || view === 'notes') {
+            if (writingsView) writingsView.style.display = 'block';
           } else {
-            writingsView.style.display = 'none';
-            homeView.style.display = 'block';
-            window.scrollTo(0, 0);
+            if (homeView) homeView.style.display = 'block';
           }
+          window.scrollTo(0, 0);
         }
 
         function checkHash() {
-          var hash = window.location.hash.toLowerCase();
-          if (hash === '#notes' || hash === '#writings') {
+          var hash = (window.location.hash || '').replace('#', '').toLowerCase();
+          if (hash === 'projects') {
+            showView('projects');
+          } else if (hash === 'contributions') {
+            showView('contributions');
+          } else if (hash === 'writings' || hash === 'notes') {
             showView('writings');
           } else {
             showView('home');
           }
         }
 
-        if (openWritingsBtn) {
-          openWritingsBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.location.hash = 'writings';
-            showView('writings');
-          });
-        }
-
-        if (backHomeBtn) {
-          backHomeBtn.addEventListener('click', function(e) {
+        // Back to home buttons
+        var backBtns = document.querySelectorAll('.back-home-btn');
+        for (var i = 0; i < backBtns.length; i++) {
+          backBtns[i].addEventListener('click', function(e) {
             e.preventDefault();
             if (window.location.hash) {
               history.pushState(null, '', window.location.pathname + window.location.search);
@@ -808,48 +957,71 @@
             .replace(/'/g, '&#039;');
         }
 
+        function renderProjectItem(item) {
+          return '<div class="project-item">' +
+            '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noreferrer noopener" class="project-link">' +
+              '<span>' + escapeHtml(item.name) + '</span>' +
+              '<svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+                '<line x1="7" y1="17" x2="17" y2="7"/>' +
+                '<polyline points="7 7 17 7 17 17"/>' +
+              '</svg>' +
+            '</a>' +
+            '<p class="project-desc">' + escapeHtml(item.desc) + '</p>' +
+          '</div>';
+        }
+
         function renderData(data) {
           if (!data) return;
 
-          // Render Projects from data.json
+          // 1. Projects:
+          // Pinned projects show on Home page; ALL projects show on the All Projects page
           if (Array.isArray(data.projects) && data.projects.length > 0) {
-            var projectsEl = document.getElementById('project-list');
-            if (projectsEl) {
-              projectsEl.innerHTML = data.projects.map(function(item) {
-                return '<div class="project-item">' +
-                  '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noreferrer noopener" class="project-link">' +
-                    '<span>' + escapeHtml(item.name) + '</span>' +
-                    '<svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
-                      '<line x1="7" y1="17" x2="17" y2="7"/>' +
-                      '<polyline points="7 7 17 7 17 17"/>' +
-                    '</svg>' +
-                  '</a>' +
-                  '<p class="project-desc">' + escapeHtml(item.desc) + '</p>' +
-                '</div>';
-              }).join('');
+            var pinnedProjects = data.projects.filter(function(p) {
+              return p.pinned === true;
+            });
+            if (pinnedProjects.length === 0) {
+              pinnedProjects = data.projects.slice(0, 3);
             }
+
+            var homeProjectsEl = document.getElementById('project-list');
+            if (homeProjectsEl) {
+              homeProjectsEl.innerHTML = pinnedProjects.map(renderProjectItem).join('');
+            }
+
+            var allProjectsEl = document.getElementById('all-projects-list');
+            if (allProjectsEl) {
+              allProjectsEl.innerHTML = data.projects.map(renderProjectItem).join('');
+            }
+
+            var countEl = document.getElementById('all-projects-count');
+            if (countEl) countEl.textContent = data.projects.length + ' projects';
           }
 
-          // Render Open Source Contributions from data.json
+          // 2. Open Source Contributions:
+          // Pinned contributions show on Home page; ALL contributions show on the All Contributions page
           if (Array.isArray(data.contributions) && data.contributions.length > 0) {
-            var contribsEl = document.getElementById('contribution-list');
-            if (contribsEl) {
-              contribsEl.innerHTML = data.contributions.map(function(item) {
-                return '<div class="project-item">' +
-                  '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noreferrer noopener" class="project-link">' +
-                    '<span>' + escapeHtml(item.name) + '</span>' +
-                    '<svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
-                      '<line x1="7" y1="17" x2="17" y2="7"/>' +
-                      '<polyline points="7 7 17 7 17 17"/>' +
-                    '</svg>' +
-                  '</a>' +
-                  '<p class="project-desc">' + escapeHtml(item.desc) + '</p>' +
-                '</div>';
-              }).join('');
+            var pinnedContribs = data.contributions.filter(function(c) {
+              return c.pinned === true;
+            });
+            if (pinnedContribs.length === 0) {
+              pinnedContribs = data.contributions.slice(0, 3);
             }
+
+            var homeContribsEl = document.getElementById('contribution-list');
+            if (homeContribsEl) {
+              homeContribsEl.innerHTML = pinnedContribs.map(renderProjectItem).join('');
+            }
+
+            var allContribsEl = document.getElementById('all-contributions-list');
+            if (allContribsEl) {
+              allContribsEl.innerHTML = data.contributions.map(renderProjectItem).join('');
+            }
+
+            var countContribsEl = document.getElementById('all-contributions-count');
+            if (countContribsEl) countContribsEl.textContent = data.contributions.length + ' contributions';
           }
 
-          // Render Notes from data.json
+          // 3. Notes:
           if (Array.isArray(data.notes) && data.notes.length > 0) {
             var notesEl = document.getElementById('notes-list');
             if (notesEl) {
@@ -858,6 +1030,20 @@
                   '<h2 class="note-headline">' + escapeHtml(item.title) + '</h2>' +
                   '<p class="note-text">' + escapeHtml(item.content) + '</p>' +
                 '</article>';
+              }).join('');
+            }
+          }
+
+          // 4. Languages & Stack:
+          if (Array.isArray(data.stack) && data.stack.length > 0) {
+            var stackEl = document.getElementById('stack-grid');
+            if (stackEl) {
+              stackEl.innerHTML = data.stack.map(function(item) {
+                return '<div class="stack-card">' +
+                  '<div class="stack-label">' + escapeHtml(item.label) + '</div>' +
+                  '<div class="stack-title">' + escapeHtml(item.title) + '</div>' +
+                  '<p class="stack-desc">' + escapeHtml(item.desc) + '</p>' +
+                '</div>';
               }).join('');
             }
           }
