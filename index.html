@@ -62,7 +62,7 @@
       }
 
       .container {
-        max-width: 56rem; /* 896px */
+        max-width: 56rem;
         margin: 0 auto;
         padding: 0 1.5rem;
       }
@@ -89,7 +89,6 @@
         font-family: var(--font-handwriting);
       }
 
-      /* Section Layout */
       .section-header {
         border-bottom: 1px solid var(--border-color);
         padding-bottom: 0.75rem;
@@ -112,7 +111,6 @@
         color: var(--text-subtle);
       }
 
-      /* Hero */
       .hero-title {
         font-family: var(--font-mono);
         font-size: 2.25rem;
@@ -142,7 +140,6 @@
         font-weight: 500;
       }
 
-      /* Quick Links Bar */
       .quick-links {
         display: flex;
         flex-wrap: wrap;
@@ -178,7 +175,6 @@
         color: #27272a;
       }
 
-      /* Project Items */
       .project-list {
         display: flex;
         flex-direction: column;
@@ -236,7 +232,6 @@
         transform: translate(1px, -1px);
       }
 
-      /* Writings button */
       .writings-btn {
         background: none;
         border: none;
@@ -267,7 +262,6 @@
         transform: translateX(4px);
       }
 
-      /* Tech Stack Grid */
       .stack-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -310,7 +304,6 @@
         padding-top: 0.25rem;
       }
 
-      /* Contact Logos */
       .contact-logos {
         display: flex;
         align-items: center;
@@ -338,7 +331,6 @@
         flex-shrink: 0;
       }
 
-      /* Writings / Notes View */
       #writings-view {
         display: none;
       }
@@ -430,7 +422,6 @@
         }
       }
 
-      /* Footer */
       footer {
         border-top: 1px solid var(--border-color);
         padding: 2.5rem 0;
@@ -443,15 +434,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-      }
-
-      /* Copy notification tooltip */
-      .copy-feedback {
-        color: #e4e4e7;
-        font-size: 0.75rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.25rem;
       }
     </style>
   </head>
@@ -506,7 +488,7 @@
             <h2 class="section-title">Projects</h2>
           </div>
 
-          <div class="project-list">
+          <div id="project-list" class="project-list">
             <div class="project-item">
               <a href="https://github.com/MrUranium1/Omanet" target="_blank" rel="noreferrer noopener" class="project-link">
                 <span>Omanet</span>
@@ -554,7 +536,7 @@
             <h2 class="section-title">Open Source Contributions</h2>
           </div>
 
-          <div class="project-list">
+          <div id="contribution-list" class="project-list">
             <div class="project-item">
               <a href="https://github.com/omacom/omarchy-plugin-marketplace" target="_blank" rel="noreferrer noopener" class="project-link">
                 <span>Omarchy Plugin Marketplace</span>
@@ -709,7 +691,7 @@
         </button>
       </div>
 
-      <div class="container notes-container">
+      <div id="notes-list" class="container notes-container">
         <article class="note-article">
           <h2 class="note-headline">i build &amp; develop for hobby.</h2>
           <p class="note-text">
@@ -719,7 +701,7 @@
       </div>
     </div>
 
-    <!-- Vanilla Javascript Interactions (Zero Build, Zero React Runtime Required) -->
+    <!-- Vanilla Javascript Interactions & Dynamic JSON Loader -->
     <script>
       (function() {
         var homeView = document.getElementById('home-view');
@@ -814,6 +796,85 @@
             }
           }
         }
+
+        // --- JSON Data Loader ---
+        function escapeHtml(str) {
+          if (!str) return '';
+          return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+        }
+
+        function renderData(data) {
+          if (!data) return;
+
+          // Render Projects from data.json
+          if (Array.isArray(data.projects) && data.projects.length > 0) {
+            var projectsEl = document.getElementById('project-list');
+            if (projectsEl) {
+              projectsEl.innerHTML = data.projects.map(function(item) {
+                return '<div class="project-item">' +
+                  '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noreferrer noopener" class="project-link">' +
+                    '<span>' + escapeHtml(item.name) + '</span>' +
+                    '<svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+                      '<line x1="7" y1="17" x2="17" y2="7"/>' +
+                      '<polyline points="7 7 17 7 17 17"/>' +
+                    '</svg>' +
+                  '</a>' +
+                  '<p class="project-desc">' + escapeHtml(item.desc) + '</p>' +
+                '</div>';
+              }).join('');
+            }
+          }
+
+          // Render Open Source Contributions from data.json
+          if (Array.isArray(data.contributions) && data.contributions.length > 0) {
+            var contribsEl = document.getElementById('contribution-list');
+            if (contribsEl) {
+              contribsEl.innerHTML = data.contributions.map(function(item) {
+                return '<div class="project-item">' +
+                  '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noreferrer noopener" class="project-link">' +
+                    '<span>' + escapeHtml(item.name) + '</span>' +
+                    '<svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+                      '<line x1="7" y1="17" x2="17" y2="7"/>' +
+                      '<polyline points="7 7 17 7 17 17"/>' +
+                    '</svg>' +
+                  '</a>' +
+                  '<p class="project-desc">' + escapeHtml(item.desc) + '</p>' +
+                '</div>';
+              }).join('');
+            }
+          }
+
+          // Render Notes from data.json
+          if (Array.isArray(data.notes) && data.notes.length > 0) {
+            var notesEl = document.getElementById('notes-list');
+            if (notesEl) {
+              notesEl.innerHTML = data.notes.map(function(item) {
+                return '<article class="note-article">' +
+                  '<h2 class="note-headline">' + escapeHtml(item.title) + '</h2>' +
+                  '<p class="note-text">' + escapeHtml(item.content) + '</p>' +
+                '</article>';
+              }).join('');
+            }
+          }
+        }
+
+        // Fetch data.json with cache-busting timestamp
+        fetch('./data.json?t=' + Date.now())
+          .then(function(res) {
+            if (!res.ok) throw new Error('data.json fetch failed: ' + res.status);
+            return res.json();
+          })
+          .then(function(jsonData) {
+            renderData(jsonData);
+          })
+          .catch(function(err) {
+            console.log('Using static content fallback:', err);
+          });
       })();
     </script>
   </body>
