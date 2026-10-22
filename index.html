@@ -755,11 +755,14 @@
           </div>
         </section>
 
-        <!-- Handwritten Writings Option -->
+<!-- Handwritten Writings Option -->
         <div style="padding-top: 0.5rem;">
-          <a href="#writings" class="writings-btn" title="Read personal notes">
-            <span>writings</span>
-            <span class="arrow">→</span>
+          <a href="#writings" class="writings-link-block" title="Read personal notes">
+            <div class="writings-btn">
+              <span>writings</span>
+              <span class="arrow">→</span>
+            </div>
+            <span class="writings-hint">Click to see the notes</span>
           </a>
         </div>
 
@@ -1207,12 +1210,14 @@
             if (countContribsEl) countContribsEl.textContent = data.contributions.length + ' contributions';
           }
 
-          // 3. Notes:
+// 3. Notes:
           if (Array.isArray(data.notes) && data.notes.length > 0) {
             var notesEl = document.getElementById('notes-list');
             if (notesEl) {
               notesEl.innerHTML = data.notes.map(function(item) {
+                var dateHtml = item.date ? '<time class="note-date">' + escapeHtml(item.date) + '</time>' : '';
                 return '<article class="note-article">' +
+                  dateHtml +
                   '<h2 class="note-headline">' + escapeHtml(item.title) + '</h2>' +
                   '<p class="note-text">' + escapeHtml(item.content) + '</p>' +
                 '</article>';
