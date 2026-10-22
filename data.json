@@ -56,6 +56,10 @@
     {
       "title": "i build & develop for hobby.",
       "content": "tinkering with low-level systems, writing C and Python, learning Rust, and daily driving Arch Linux on Omarchy — just the pure craft without the noise."
+    },
+    {
+      "title": "Maybe I should build a rust chess engine.",
+      "content": "Dang it! it already exists"
     }
   ]
 }
