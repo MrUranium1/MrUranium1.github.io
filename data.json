@@ -30,13 +30,13 @@
     {
       "name": "Omarchy Plugin Marketplace",
       "url": "https://github.com/omacom/omarchy-plugin-marketplace",
-      "desc": "Contributed to the plugin marketplace ecosystem for Omarchy users. Worked on repository indexing, package validation rules, and streamlined installation tooling for customized Arch environments.",
+      "desc": "Contributed to the plugin marketplace ecosystem for Omarchy users.",
       "pinned": true
     },
     {
       "name": "Xerj AI Search Engine",
       "url": "https://github.com/xerj-org/xerj",
-      "desc": "Contributed to query ingestion and indexing routines for the Xerj search engine. Assisted in processing pipeline handlers and performance improvements for data fetching.",
+      "desc": "Contributed to Xerj search engine.",
       "pinned": true
     }
   ],
@@ -62,11 +62,6 @@
       "title": "i build & develop for hobby.",
       "date": "2026.10.22",
       "content": "tinkering with low-level systems, writing C and Python, learning Rust, and daily driving Arch Linux on Omarchy — just the pure craft without the noise."
-    },
-    {
-      "title": "why i love building offline & peer-to-peer tools",
-      "date": "2026.09.14",
-      "content": "When building Local_Chess, the goal was simple: no accounts, no central servers, no cloud dependency. Just two devices communicating directly over local Wi-Fi and Bluetooth. Software should still work when the internet is cut."
     }
   ]
 }
