@@ -23,7 +23,7 @@
       "name": "Local_Chess",
       "url": "https://github.com/MrUranium1/Local_Chess",
       "desc": "Play chess with friends nearby with no internet required. Connect over Bluetooth or local Wi-Fi for real-time peer-to-peer multiplayer chess matches.",
-      "pinned": true
+      "pinned": false
     }
   ],
   "contributions": [
