@@ -24,6 +24,12 @@
       "url": "https://github.com/MrUranium1/Local_Chess",
       "desc": "Play chess with friends nearby with no internet required. Connect over Bluetooth or local Wi-Fi for real-time peer-to-peer multiplayer chess matches.",
       "pinned": false
+    },
+    {
+      "name": "SkeletonStructure",
+      "url": "https://github.com/SkeletonStructure/SkeletonStructure",
+      "desc": "Open Source backend foundation built on Type script.",
+      "pinned": true
     }
   ],
   "contributions": [
